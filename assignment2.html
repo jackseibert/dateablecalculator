@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--Jack Seibert-->
+<html>
+<head>
+<title>Assignment 2</title>
+</head>
+<body>
+
+<h1>Dateable Calculator</h1>
+
+<p>Please enter you and your significant other's ages in the boxes below to see if you 
+are the right age for each other!</p>
+
+<!-- Identifiers for the input boxes -->
+<input id="age1">
+<input id="age2">
+
+<!-- Button tag -->
+<button type="button" onclick="myFunction()">Submit</button>
+
+<!-- Identifier for the output paragraph -->
+<p id="demo"></p>
+
+<!-- JavaScript code goes here -->
+<script>
+function myFunction() {
+    var x;
+    var y;
+    var text;
+
+    // Get the values of the input fields
+    x = document.getElementById("age1").value;
+    y = document.getElementById("age2").value;
+
+    // If else statement
+    if (isNaN(x) || isNaN(y)) {
+        text = "That's not a number!";
+    } else if (x >= 18 && y < 18) {
+    	text = "One of you needs to call the cops!";
+    } else if (y >= 18 && x < 18) {
+    	text = "One of you needs to call the cops!";
+    } else if (y < (x/2) + 7|| x < (y/2) + 7) {
+    	text = "That's kind of weird!";
+    } else {
+        text = "Yes, this is completely normal!";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 
