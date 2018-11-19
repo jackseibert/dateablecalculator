@@ -16,14 +16,14 @@ are the right age for each other!</p>
 <input id="age2">
 
 <!-- Button tag -->
-<button type="button" onclick="myFunction()">Submit</button>
+<button type="button" onclick="isDateable()">Submit</button>
 
 <!-- Identifier for the output paragraph -->
-<p id="demo"></p>
+<p id="results"></p>
 
-<!-- JavaScript code goes here -->
+<!-- JavaScript-->
 <script>
-function myFunction() {
+function isDateable() {
     var x;
     var y;
     var text;
@@ -44,7 +44,7 @@ function myFunction() {
     } else {
         text = "Yes, this is completely normal!";
     }
-    document.getElementById("demo").innerHTML = text;
+    document.getElementById("results").innerHTML = text;
 }
 </script>
 
